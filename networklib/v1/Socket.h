@@ -1,8 +1,6 @@
-#ifndef __SOCKET_H__
-#define __SOCKET_H__
+#pragma once
 
 #include"Noncopyable.h"
-
 namespace wd
 {
 
@@ -25,6 +23,4 @@ public:
 private:
     int sockfd_;
 };
-
 }
-#endif
