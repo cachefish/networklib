@@ -1,26 +1,29 @@
-#pragma once
 
-#include"Noncopyable.h"
+#ifndef __SOCKET_H
+#define __SOCKET_H
+
+#include "Noncopyable.h"
+
 namespace wd
 {
-
 class InetAddress;
-class Socket:public Noncopyable
+class Socket : Noncopyable
 {
 public:
-    Socket(int sockfd);
-    Socket();
-    ~Socket();
+	explicit Socket(int sockfd);
+	Socket();
+	~Socket();
 
-    void shutdownWrite();  //关闭写
-    int fd()const{return sockfd_;}
+	void shutdownWrite();
+	int fd()const{	return sockfd_;	}
 
-    void nonblock();  //设置非阻塞
+	void nonblock();
 
-    static InetAddress getLocalAddr(int sockfd);        //获取本地协议地址
-    static InetAddress getPeerAddr(int sockfd);         //获取外地协议地址
-
+	static InetAddress getLocalAddr(int sockfd);
+	static InetAddress getPeerAddr(int sockfd);
 private:
-    int sockfd_;
+	int sockfd_;
 };
-}
+}// end of namespace wd
+
+#endif

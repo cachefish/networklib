@@ -1,5 +1,5 @@
 #ifndef __SOCKETIO_H__
-#define __SOCKETO_H__
+#define __SOCKETIO_H__
 
 #include<stdio.h>
 
