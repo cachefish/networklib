@@ -24,11 +24,11 @@ int main(int argc, const char *argv[])
     struct sockaddr_in addr;
     memset(&addr, 0, sizeof addr);
     addr.sin_family = AF_INET;
-    addr.sin_addr.s_addr = inet_addr("192.168.95.142"); //localhost
+    addr.sin_addr.s_addr = inet_addr("192.168.1.108"); //localhost
     //addr.sin_addr.s_addr = INADDR_ANY; //localhost
     addr.sin_port = htons(8888);
     socklen_t len = sizeof addr;
-    if(connect(peerfd, (struct sockaddr*)&addr, len) == -1)
+    if(connect(peerfd, (struct sockaddr*)&addr, len)== -1)
         ERR_EXIT("Connect");
 
 	char buf[1024];

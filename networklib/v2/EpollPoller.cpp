@@ -56,7 +56,7 @@ void EpollPoller::waitEpollfd()
 {
     int nready;
     do{
-        nready = epoll_wait(epollfd_,&(*eventList_.begin()),eventList_.size(),5000);
+        nready = ::epoll_wait(epollfd_,&(*eventList_.begin()),eventList_.size(),5000);
     }while(nready == -1&&errno == EINTR);
     
     if(nready == -1)
