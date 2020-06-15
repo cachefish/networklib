@@ -22,6 +22,7 @@ namespace cf
             ~TcpConnection();
             std::string receive();
             void send(const std::string&msg);
+            void sendInLoop(const std::string & msg);
             void shutdown();
             
             std::string toString();
