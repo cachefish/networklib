@@ -46,7 +46,7 @@ private:
 	bool isLooping_;
 
 	MutexLock _mutex;
-	std::vector<Functor> _pendingFunctors;
+	std::vector<Functor> _pendingFunctors;  //等待进行调度的函数
 
 	typedef std::vector<struct epoll_event> EventList;
 	EventList eventsList_;

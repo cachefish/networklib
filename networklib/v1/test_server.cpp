@@ -13,7 +13,7 @@ using std::endl;
 
 int main(int argc,char*argv[])
 {
-    wd::InetAddress addr("192.168.95.142",8888);
+    wd::InetAddress addr("192.168.1.108",8888);
     wd::Acceptor acceptor(wd::createSocketfd(),addr);
     acceptor.ready();
 
